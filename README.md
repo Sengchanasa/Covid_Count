@@ -20,7 +20,7 @@ Change your working directory into your newly created project directory and run 
 
 ```sh
 # Change working directory to your previously specified directory.
-$ cd <directory>
+$ cd Covid_Count
 
 # Install dependencies.
 $ npm install
