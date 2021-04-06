@@ -33,9 +33,10 @@ app.setHandler({
     let start_date = new Date("03/11/2020")
     let length_time = end_date.getTime() - start_date.getTime()
     let days = (length_time / (1000 * 3600 * 24)) + 1
-
+    this.ask('WelcomIntent')
     this.$speech.addText('Its been ' + Math.floor(days) + ' days since the start of the pandemic on March 11, 2020.')
     this.tell(this.$speech)
+    
   },
 
   WelcomeIntent() {

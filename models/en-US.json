@@ -2,10 +2,6 @@
   "invocation": "my test app",
   "intents": [
     {
-    "name": "DaysSinceCovidIntent",
-    "phrases": ["how long","how many days"]
-    },
-    {
       "name": "HelloWorldIntent",
       "phrases": ["hello", "say hello", "say hello world"]
     },
