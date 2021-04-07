@@ -25,7 +25,7 @@ app.use(
 
 app.setHandler({
   LAUNCH() {
-    return this.toIntent('DaysSinceCovidIntent');
+    return this.toIntent('WelcomeIntent');
   },
 
   DaysSinceCovidIntent() {
@@ -33,7 +33,6 @@ app.setHandler({
     let start_date = new Date("03/11/2020")
     let length_time = end_date.getTime() - start_date.getTime()
     let days = (length_time / (1000 * 3600 * 24)) + 1
-    this.ask('WelcomIntent')
     this.$speech.addText('Its been ' + Math.floor(days) + ' days since the start of the pandemic on March 11, 2020.')
     this.tell(this.$speech)
     
@@ -42,9 +41,8 @@ app.setHandler({
   WelcomeIntent() {
 
     let welcomeMessages = 
-    ["Hello, you are using 'days since covid-19'. ",
-     "Thank you for using this application.",
-     "This application's functionality calculates how many days since covid",
+    ["Hello, you are using 'days since the pandemic'. ",
+     "This application's functionality calculates how many days since the pandemic",
     ]
     this.$speech.addText(welcomeMessages)
     this.ask(this.$speech);
